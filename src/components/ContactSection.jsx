@@ -143,7 +143,7 @@ export default function EarlyAccessWithMap() {
 
           <div className="rounded-xl overflow-hidden border border-white/30 shadow-md flex-1">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5465019406697!2d80.206761!3d13.000831999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267432669a727%3A0xe8a38bd99924b53!2sRs%2C%2022-38%2C%20Parutthivakam%20St%2C%20Ramapuram%2C%20Mosque%20Colony%2C%20Alandur%2C%20Chennai%2C%20Tamil%20Nadu%20600016!5e0!3m2!1sen!2sin!4v1756143006222!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.556308123949!2d80.20406537454697!3d13.000206014251564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267796de8b08b%3A0x4382a5f76b2dc8e0!2sClutchX%20Private%20Limited!5e0!3m2!1sen!2sin!4v1758364893308!5m2!1sen!2sin"
               className="w-full h-full border-0"
               allowFullScreen=""
               loading="lazy"

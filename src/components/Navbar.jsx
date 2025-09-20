@@ -32,8 +32,10 @@ export default function Navbar({ theme }) {
     { label: "Categories", id: "categories" },
     { label: "Gallery", id: "gallery" },
     { label: "Reviews", id: "reviews" },
-    { label: "Contact", id: "contact" },
-    { label: "Download", id: "download" },
+    { label: "Early Access", id: "contact" },
+     { label: "Connect Now", id: "download" },
+    // { label: "Contact", id: "footer" },
+   
   ];
 
   // Update highlight pill position & width on activeSection or menu change

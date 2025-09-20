@@ -139,7 +139,11 @@ function App() {
         <section id="download">
           <DownloadAppSection />
         </section>
-        <Footer />
+
+        <section id="footer">
+            <Footer />
+        </section>
+      
       </div>
     </div>
   );

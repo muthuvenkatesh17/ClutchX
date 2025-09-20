@@ -2,25 +2,20 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Sample app assets
-const playStoreScreenshot =
-  "https://play-lh.googleusercontent.com/YtAg7xG9C7ChPiCVn2qPlJxCgs7NtV6DpZz5tToNl5WjTu7Atv6XfPVYJ5qI6dXGHgw=w720-h310-rw";
-const appStoreScreenshot =
-  "https://developer.apple.com/assets/elements/screenshots/app-store/sample-app-iphone-portrait-1.png";
+// Store badges
 const playStoreBadge =
   "https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg";
 const appStoreBadge =
   "https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg";
 
-// Sample QR code from the internet
-const sampleQRCode =
-  "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://clutchx.com";
-
 export default function DownloadAppSection() {
-  const [showQR, setShowQR] = useState(false);
+  const [showComingSoon, setShowComingSoon] = useState(false);
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-10" style={{ userSelect: "none" }}>
+    <section
+      className="max-w-7xl mx-auto px-6 py-10"
+      style={{ userSelect: "none" }}
+    >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -35,16 +30,11 @@ export default function DownloadAppSection() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
-          <img
-            src={playStoreScreenshot}
-            alt="App Screenshot on Play Store"
-            className="w-48 rounded-3xl shadow-lg mb-6 object-cover"
-            draggable={false}
-          />
           <button
-            onClick={() => setShowQR(true)}
-            className="block w-36 hover:scale-105 transition-transform"
-            aria-label="Download on Google Play Store"
+            onClick={() => setShowComingSoon(true)}
+            className="block w-36 cursor-not-allowed grayscale opacity-70"
+            aria-label="Coming soon on Google Play Store"
+            disabled
           >
             <img
               src={playStoreBadge}
@@ -53,6 +43,7 @@ export default function DownloadAppSection() {
               draggable={false}
             />
           </button>
+          <p className="mt-2 text-sm text-gray-400 italic">Coming Soon</p>
         </motion.div>
 
         {/* Center - Text */}
@@ -63,11 +54,11 @@ export default function DownloadAppSection() {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <h2 className="text-4xl font-extrabold text-white mb-4">
-            Download It
+            Coming Soon 🚀
           </h2>
           <p className="text-gray-300 text-lg leading-relaxed">
-            Get ClutchX on your mobile device and enjoy seamless access to our
-            features anytime, anywhere.
+            ClutchX is on the way! Soon you’ll be able to download it on iOS and
+            Android. Stay tuned for updates.
           </p>
         </motion.div>
 
@@ -78,16 +69,11 @@ export default function DownloadAppSection() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
-          <img
-            src={appStoreScreenshot}
-            alt="App Screenshot on App Store"
-            className="w-48 rounded-3xl shadow-lg mb-6 object-cover"
-            draggable={false}
-          />
           <button
-            onClick={() => setShowQR(true)}
-            className="block w-36 hover:scale-105 transition-transform"
-            aria-label="Download on Apple App Store"
+            onClick={() => setShowComingSoon(true)}
+            className="block w-36 cursor-not-allowed grayscale opacity-70"
+            aria-label="Coming soon on Apple App Store"
+            disabled
           >
             <img
               src={appStoreBadge}
@@ -96,12 +82,13 @@ export default function DownloadAppSection() {
               draggable={false}
             />
           </button>
+          <p className="mt-2 text-sm text-gray-400 italic">Coming Soon</p>
         </motion.div>
       </motion.div>
 
-      {/* QR Code Modal */}
+      {/* Coming Soon Modal */}
       <AnimatePresence>
-        {showQR && (
+        {showComingSoon && (
           <motion.div
             className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
             initial={{ opacity: 0 }}
@@ -116,15 +103,14 @@ export default function DownloadAppSection() {
               transition={{ duration: 0.3 }}
             >
               <h3 className="text-xl font-semibold text-white mb-4">
-                Scan to Download ClutchX
+                📱 ClutchX App
               </h3>
-              <img
-                src={sampleQRCode}
-                alt="QR Code to download ClutchX"
-                className="mx-auto w-40 h-40 rounded-lg"
-              />
+              <p className="text-gray-200">
+                We’re still putting on the finishing touches.  
+                The app will be available on the App Store & Play Store soon!
+              </p>
               <button
-                onClick={() => setShowQR(false)}
+                onClick={() => setShowComingSoon(false)}
                 className="mt-6 px-4 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition"
               >
                 Close
