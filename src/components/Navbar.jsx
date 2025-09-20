@@ -33,7 +33,7 @@ export default function Navbar({ theme }) {
     { label: "Gallery", id: "gallery" },
     { label: "Reviews", id: "reviews" },
     { label: "Early Access", id: "contact" },
-     { label: "Connect Now", id: "download" },
+     { label: "Connect Now", id: "footer" },
     // { label: "Contact", id: "footer" },
    
   ];
