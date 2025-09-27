@@ -36,7 +36,7 @@ export default function EarlyAccessWithMap() {
 
     emailjs
       .send(
-        "service_zt426d4",
+        "service_catap5e",
         "template_ec9w29i",
         { ...formData },
         "XymN87JECTZ1vN0vg"
